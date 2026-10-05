@@ -1768,7 +1768,11 @@ a.pildora:focus-visible { outline: 2px solid var(--violeta); outline-offset: 3px
    tramo en degradado van en violeta liso: el degradado recortado
    sobre el texto no sobrevive a partir la frase en trozos. */
 .frase-lam { padding-bottom: 210px; }
-.frase-lam .frase { font-size: 50px; max-width: none; }
+/* Los cortes de linea van puestos a mano con <br>, asi que aqui no
+   se deja partir nada mas. En el iPhone el navegador medía el ancho
+   de la frase antes de cargar Poppins (que es mas ancha) y luego
+   partia "en ti" a otra linea. */
+.frase-lam .frase { font-size: 50px; max-width: none; white-space: nowrap; }
 .frase .pal {
   display: inline-block;
   opacity: 0;
