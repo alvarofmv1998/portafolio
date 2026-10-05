@@ -53,6 +53,14 @@
 
 * { box-sizing: border-box; }
 
+/* SIN ESTO EL MOVIL AGRANDA EL TEXTO POR SU CUENTA.
+   Safari y Chrome en iPhone "ayudan" subiendo la letra de los
+   bloques de texto largos cuando la pagina se ve encogida, y aqui
+   todo el lienzo de 1600 se ve encogido. Resultado: frases que
+   saltan de linea y la trayectoria saliendose por abajo. Con esto
+   la letra se queda exactamente como en el ordenador. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 /* Nunca una palabra sola en la ultima linea de un parrafo: el
    navegador reparte las lineas para que la ultima lleve al menos
    dos. Los titulares, ademas, se equilibran entre lineas. */
